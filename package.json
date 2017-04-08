@@ -1,0 +1,21 @@
+{
+  "name": "grow",
+  "version": "0.0.1",
+  "description": "Manage IoT sensors for a greenhouse.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "../git"
+  },
+  "keywords": [
+    "iot",
+    "greenhouse",
+    "esp8266",
+    "smart"
+  ],
+  "author": "rug",
+  "license": "ISC"
+}
