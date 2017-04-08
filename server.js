@@ -1,5 +1,6 @@
-const express = require('express');
-const app = express();
+const express = require('express')
+const app = express()
+const PythonShell = require('python-shell')
 
 app.listen("8888", ()=>{
     console.log("Listening on 8888...")
@@ -17,7 +18,7 @@ app.get("/", (req, res) => {
 })
 
 function getRandomInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min)) + min;
+    min = Math.ceil(min)
+    max = Math.floor(max)
+    return Math.floor(Math.random() * (max - min)) + min
 }
