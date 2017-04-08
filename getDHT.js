@@ -1,5 +1,5 @@
 const PythonShell = require('python-shell');
-const pyshell = new PythonShell('/resources/GrovePi/Software/Python/grove_dht_pro.py');
+const pyshell = new PythonShell('./resources/GrovePi/Software/Python/grove_dht_pro.py');
  
 pyshell.on('message', function (message) {
     // received a message sent from the Python script (a simple "print" statement) 
