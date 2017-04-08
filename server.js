@@ -1,6 +1,5 @@
 const express = require('express')
 const app = express()
-const PythonShell = require('python-shell')
 
 app.listen("8888", ()=>{
     console.log("Listening on 8888...")
@@ -8,6 +7,7 @@ app.listen("8888", ()=>{
 
 
 app.get("/", (req, res) => {
+    require("./getDHT.js")
     let temp = getRandomInt( 10, 80 )
     let humd = getRandomInt( 15, 77 )
     let json = {
