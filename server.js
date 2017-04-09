@@ -5,7 +5,6 @@ app.listen("8888", ()=>{
     console.log("Listening on 8888...")
 })
 
-
 app.get("/", (req, res) => {
     let dht = require("./getDHT.js")()
     console.log("dht: ", dht)
