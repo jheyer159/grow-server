@@ -9,6 +9,7 @@ app.listen("8888", ()=>{
 app.get("/", (req, res) => {
     let dht = require("./getDHT.js")()
     console.log("dht: ", dht)
+    console.log("micCheck12")
     let temp = getRandomInt( 10, 80 )
     let humd = getRandomInt( 15, 77 )
     let json = {
@@ -23,3 +24,5 @@ function getRandomInt(min, max) {
     max = Math.floor(max)
     return Math.floor(Math.random() * (max - min)) + min
 }
+
+
