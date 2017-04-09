@@ -23,6 +23,8 @@
     "python-shell": "^0.4.0"
   },
   "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-preset-env": "^1.3.3",
     "babel-preset-es2015-node": "^6.1.1",
     "nodemon": "^1.11.0"
   }

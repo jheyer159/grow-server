@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 //import dht from "./getDHT"
 const dht = require('./getDHT')
+require("babel-core").transform("code", options);
 app.listen("8888", ()=>{
     console.log("Listening on 8888...")
 })
