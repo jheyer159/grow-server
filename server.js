@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
         "temperature": temp,
         "humidity": humd
     }
-    res.send("this is send" + json )
+    res.send(json.stringify() )
 })
 
 function getRandomInt(min, max) {
