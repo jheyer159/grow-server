@@ -1,15 +1,17 @@
-const PythonShell = require('python-shell');
-// const dht = './resources/GrovePi/Software/Python/grove_dht_pro.py'
+var PythonShell = require('python-shell');
  
-var get = function(){
-/*
-   PythonShell.run( dht, function (err, results) {
-   	if (err) throw err;
-   	received a message sent from the Python script (a simple "print" statement) 
-   }
-*/
-console.log("hello", "wanna get high?")
-}
-
+var options = {
+  mode: 'text',
+  pythonPath: 'path/to/python',
+  pythonOptions: ['-u'],
+  scriptPath: 'path/to/my/scripts',
+  args: ['value1', 'value2', 'value3']
+};
+ 
+PythonShell.run('my_script.py', options, function (err, results) {
+  if (err) throw err;
+  // results is an array consisting of messages collected during execution 
+  console.log('results: %j', results);
+});
 
 module.exports = get
