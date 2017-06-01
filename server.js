@@ -22,14 +22,11 @@ app.get("/", (req, res) => {
         json.temperature = temp
         json.humidity = hum
         console.log( json )
+        res.send(JSON.stringify(json) )
     })
     .catch( e => {
         console.error( e )
     })
-
-    //create json for client
-
-    res.send(JSON.stringify(json) )
 })
 
 
