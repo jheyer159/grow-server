@@ -13,15 +13,10 @@ app.get("/", (req, res) => {
     }
 
     dht().then( data => {
-        console.log( data )
+        console.log( "Request for DHT" )
         let dataJSON = JSON.parse(data[0])
-        let temp = dataJSON.temp
-        let hum = dataJSON.hum
-        console.log( "temp" + temp)
-        console.log( "hum" + hum )
-        json.temperature = temp
-        json.humidity = hum
-        console.log( json )
+        json.temperature = dataJSON.temp
+        json.humidity = dataJSON.hum
         res.send(JSON.stringify(json) )
     })
     .catch( e => {
