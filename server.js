@@ -10,13 +10,11 @@ app.get("/", (req, res) => {
     let temp = "55"
     let humd = "55"
 
-    async function tick() {
-        let pGet = await dht()
-        return pGet
-    }
-
-    tick().then( data => {
+    dht().then( data => {
         console.log( data )
+    })
+    .catch( e => {
+        console.error( e )
     })
 
     //create json for client
