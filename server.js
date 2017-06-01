@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
 
     dht().then( data => {
         console.log( data )
-        dataJSON = JSON.parse(data[0])
+        let dataJSON = JSON.parse(data[0])
         let temp = dataJSON.temp
         let humd = dataJSON.hum
         console.log( "temp" + temp)
