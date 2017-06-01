@@ -2,7 +2,7 @@ var PythonShell = require('python-shell');
 //var pyshell = new PythonShell('lib/GrovePi/Software/Python/grove_dht_pro.py');
 var pyshell = new PythonShell('test.py');
 
-export default function pGet(){
+export default function (){
   console.log( "exports")
   return new Promise( function(resolve, reject){
     pyshell.on('message', function (message) {
