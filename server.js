@@ -1,6 +1,6 @@
 const express = require("express")
 const app = express()
-import dht from "./src/getDHT"
+import getDHT from "./src/getDHT"
 
 app.listen("8888", ()=>{
     console.log("Listening on 8888...")
@@ -9,15 +9,16 @@ app.listen("8888", ()=>{
 app.get("/", (req, res) => {
     let temp = "55"
     let humd = "55"
-    async () => {
-        try {
-            let pGet = await dht.pGet()
-            console.log(dht)
-        }
-        catch(e){
-            console.error(e)
-        }
+
+    async function tick() {
+        let pGet = await dht.pGet()
+        return pGet
     }
+
+    tick().then( data => {
+        console.log( data )
+    })
+
     //create json for client
     let json = {
         "temperature": temp,
