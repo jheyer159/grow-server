@@ -6,7 +6,7 @@ app.listen("8888", ()=>{
 })
 
 app.get("/", (req, res) => {
-    let dht = require("./src/getDHT.js")()
+    let dht = require("./src/getDHT.js")
     //console.log("dht: ", dht)
     let temp = getRandomInt( 55, 56 )
     let humd = getRandomInt( 55, 56 )
