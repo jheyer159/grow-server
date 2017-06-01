@@ -7,21 +7,28 @@ app.listen("8888", ()=>{
 })
 
 app.get("/", (req, res) => {
-    let temp = "55"
-    let humd = "55"
+    let json = {
+        "temperature": false,
+        "humidity": false
+    }
 
     dht().then( data => {
         console.log( data )
+        dataJSON = JSON.parse(data[0])
+        let temp = dataJSON.temp
+        let humd = dataJSON.hum
+        console.log( "temp" + temp)
+        console.log( "hum" + hum )
+        json.temperature = temp
+        json.humidity = hum
+        console.log( json )
     })
     .catch( e => {
         console.error( e )
     })
 
     //create json for client
-    let json = {
-        "temperature": temp,
-        "humidity": humd
-    }
+
     res.send(JSON.stringify(json) )
 })
 
