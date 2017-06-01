@@ -16,7 +16,7 @@ app.get("/", (req, res) => {
         console.log( data )
         let dataJSON = JSON.parse(data[0])
         let temp = dataJSON.temp
-        let humd = dataJSON.hum
+        let hum = dataJSON.hum
         console.log( "temp" + temp)
         console.log( "hum" + hum )
         json.temperature = temp
