@@ -9,7 +9,7 @@ var options = {
 };
  
 var PythonShell = require('python-shell');
-var pyshell = new PythonShell('test.py');
+var pyshell = new PythonShell('./gitGrovePi/Software/Python/grove_dht_pro.py');
 
 
 pyshell.on('message', function (message) {
