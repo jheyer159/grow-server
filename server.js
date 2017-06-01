@@ -1,15 +1,24 @@
-const express = require('express')
+const express = require("express")
 const app = express()
+import dht from "./src/getDHT"
 
 app.listen("8888", ()=>{
     console.log("Listening on 8888...")
 })
 
 app.get("/", (req, res) => {
-    let dht = require("./src/getDHT.js")
-    //console.log("dht: ", dht)
-    let temp = getRandomInt( 55, 56 )
-    let humd = getRandomInt( 55, 56 )
+    let temp = "55"
+    let humd = "55"
+    async () => {
+        try {
+            let pGet = await dht.pGet()
+            console.log(dht)
+        }
+        catch(e){
+            console.error(e)
+        }
+    }
+    //create json for client
     let json = {
         "temperature": temp,
         "humidity": humd
