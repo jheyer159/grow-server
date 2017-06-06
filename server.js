@@ -13,7 +13,8 @@ app.get("/", (req, res) => {
     }
 
     dht().then( data => {
-        console.log( "Request for DHT" )
+        let now = new Date()
+        console.log( now.toString() + "Request for DHT" )
         let dataJSON = JSON.parse(data[0])
         json.temperature = dataJSON.temp
         json.humidity = dataJSON.hum
