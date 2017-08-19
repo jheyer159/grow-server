@@ -1,6 +1,6 @@
 const express = require("express")
 const app = express()
-import dht from "./src/getDHT"
+const dht = require("./src/getDHT")
 
 app.listen("8888", ()=>{
     console.log("Listening on 8888...")
