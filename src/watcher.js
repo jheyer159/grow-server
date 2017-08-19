@@ -1,6 +1,7 @@
-import dht from "./src/getDHT"
+const dht = require("./getDHT")
 
 var Watcher = function(options){
+    options = JSON.parse(options)
     this.type = options.type;
     this.low = options.low
     this.high = options.high
@@ -9,7 +10,17 @@ var Watcher = function(options){
 }
 
 Watcher.prototype.activate = function(){
-    return true
+    var json = { 
+        "type": this.type,
+        "low": this.low,
+        "high": this.high,
+        "lowFunc": this.lowFunc,
+        "highFunc": this.highFunc
+    }
+    return JSON.stringify(json)
 }
+
+
+//types possible
 
 module.exports = Watcher
