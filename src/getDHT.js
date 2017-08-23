@@ -1,5 +1,5 @@
 //var PythonShell = require('python-shell')
-const grove = require('node-grovepi').GrovePi
+const GrovePi = require('node-grovepi').GrovePi
 
 var Commands = GrovePi.commands
 var Board = GrovePi.board
