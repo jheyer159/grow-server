@@ -15,7 +15,7 @@ var board = new Board({
       if (res) {
         console.log('GrovePi Version :: ' + board.version())
 
-        var dhtSensor = new DHTDigitalSensor(1)
+        var dhtSensor = new DHTDigitalSensor(2,'DHT22','f')
         console.log('DHT (start watch)')
         dhtSensor.on('change', function(res) {
           console.log('DHT onChange value=' + res)
