@@ -12,7 +12,7 @@ app.get("/", (req, res) => {
         "temperature": false,
         "humidity": false
     }
-    const dht = require("./src/getDHT")
+    var dht = require("./src/getDHT")
     /*
     dht().then( data => {
         let now = new Date()
@@ -26,6 +26,7 @@ app.get("/", (req, res) => {
         console.error( e )
     })
     */
+    res.send('got it')
 })
 
 
