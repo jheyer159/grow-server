@@ -25,6 +25,8 @@ var board = new Board({
     }
   })
 
+board.init()
+
 
 
 /*
