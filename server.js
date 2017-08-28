@@ -26,6 +26,7 @@ app.get("/", (req, res) => {
         console.error( e )
     })
     */
+    var dht = null //test
     res.send('got it')
 })
 
